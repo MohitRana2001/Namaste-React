@@ -1,0 +1,4 @@
+{
+    // This plugin is used to remove console.logs when the files are configured.
+    // "plugins": [ ["transform-remove-console", { "exclude": [ "error", "warn"] }] ]
+  }
