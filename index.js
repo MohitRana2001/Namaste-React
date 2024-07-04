@@ -21,7 +21,8 @@ Zero Config Bundler,
 Transitive Dependencies :- To make a production ready
     application we use serveral modules and they need several
     dependencies. There is a dependency tree between these 
-    dependencies.
+    dependencies.,
+Tree Shaking
 *
 *
 *
@@ -32,15 +33,27 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 
-const heading1 = React.createElement("h1", {
-    id : "heading2",
-}, "Namaste Everyone")
+const heading1 = React.createElement(
+    "h1", 
+    {
+    id : "heading1",
+    key : "h1",
+    },
+    "Namaste Everyone"
+);
+
+//React.createElement => Object => HTML(DOM)
 
 console.log(heading1);
 
-const heading2 = React.createElement("h2", {
+const heading2 = React.createElement(
+    "h2", 
+    {
     id : "heading2",
-}, "Heading 2");
+    key : "h2",
+    },
+    "Heading 2"
+);
 
 console.log(heading2);
 
