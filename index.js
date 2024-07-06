@@ -46,20 +46,7 @@ const heading1 = React.createElement(
 
 console.log(heading1);
 
-const heading2 = React.createElement(
-    "h2", 
-    {
-    id : "heading2",
-    key : "h2",
-    },
-    "Heading 2"
-);
-
-console.log(heading2);
-
-const container = React.createElement("div", {
-    id: "container",
-}, [heading1, heading2]);
+const heading2 = <h1 id="title" key="h2"> Namaste React</h1>
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
         
