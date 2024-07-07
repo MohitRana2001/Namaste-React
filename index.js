@@ -32,22 +32,31 @@ Tree Shaking
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-
-const heading1 = React.createElement(
-    "h1", 
-    {
-    id : "heading1",
-    key : "h1",
-    },
-    "Namaste Everyone"
+const Title = () => (
+    <h1 id="title" key="h2">
+        Namste React
+    </h1>
 );
+
+const HeaderComponent = () => {
+    return (
+        <div>
+            <Title />
+            <h1>
+                Namaste React functional components
+            </h1>
+            <h2>
+            This is a functional component
+            </h2>
+        </div>
+    )
+}
 
 //React.createElement => Object => HTML(DOM)
 
-console.log(heading1);
 
 const heading2 = <h1 id="title" key="h2"> Namaste React</h1>
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
         
-root.render(container);
+root.render(<HeaderComponent />);
