@@ -52,6 +52,12 @@ const HeaderComponent = () => {
     )
 }
 
+const AppLayout = () {
+    <Header/>
+    <Body/>
+    <Footer/>
+}
+
 //React.createElement => Object => HTML(DOM)
 
 
