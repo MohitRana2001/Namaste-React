@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import About from './components/AboutUs';
 import Header from './components/Header';
 import Body from './components/Body';
-
 /* Components of Our Food-Order App
  * Header
  * - Logo
@@ -61,6 +61,8 @@ import Body from './components/Body';
  
 */
 
+
+
 const currYear = new Date().getFullYear();
 
 const Footer = () => {
@@ -84,5 +86,16 @@ const AppLayout = () => {
   );
 };
 
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />
+  },
+  {
+    path: "/about",
+    element: <About />
+  }
+]);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<AppLayout />);
+root.render(<RouterProvider router={appRouter}/>);
